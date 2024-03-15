@@ -6,6 +6,7 @@ import {
   getAlbumWithYearOF,
   getAlbumWithArtistName,
   getAlbumByGenre,
+  getAlbumByTitle,
 } from "./commands.mjs";
 
 // legelső lépés index.js-t létrehozni
@@ -158,6 +159,9 @@ if (command === 'most-genre') {
 } else if (command === 'genre') {
   const genre = process.argv[3];
   getAlbumByGenre(bestSellingAlbums, genre)
+} else if (command === 'title'){
+  const title = process.argv[3];
+  getAlbumByTitle(bestSellingAlbums, title);
 }
 else {
   console.log(" i do not understand", command);
